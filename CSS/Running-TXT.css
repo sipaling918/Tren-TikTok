@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Pixel-Bit';
+    src: url(../Font/kkberkbm.ttf);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    width: 295%;
+    height: 400%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Pixel-Bit';
+    margin: 6.2% 0;
+    font-size: 150px;
+    /* outline: none; */
+    text-transform: uppercase;
+    background: linear-gradient(to right, #e5ff00 0%, #00ff0d 25%, #1100ff 50%, #ff00d4 75%, #ff8800 100%);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 16s linear infinite;
+}
+
+@keyframes animate {
+    to {
+        background-position: 400%;
+    }
+    0% {
+        transform: translateX(47%);
+    }
+    100% {
+        transform: translateX(-120%);
+    }
+}
+
+@media (max-width:320px) {
+    body {
+        width: 1670%;
+        height: 100%;
+    }
+    h1 {
+        font-family: 'Pixel-Bit';
+        margin: 23% 0;
+    }
+    @keyframes animate {
+        to {
+            background-position: 400%;
+        }
+        0% {
+            transform: translateX(47%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+}
