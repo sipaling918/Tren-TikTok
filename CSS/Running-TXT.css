@@ -3,12 +3,14 @@
     src: url(../Font/kkberkbm.ttf);
 }
 
+html {
+    background-color: black;
+}
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
-    color: white;
     height: 100vw;
     overflow: hidden;
     padding: 0;
