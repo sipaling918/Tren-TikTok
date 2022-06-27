@@ -15,9 +15,10 @@ body {
 }
 
 .parent h2 {
-    margin-top: 3px;
+    margin: 3px;
     position: absolute;
-    left: 39%;
+    font-family: Arial, Helvetica, sans-serif;
+    /* left: 45%; */
 }
 
 .parent-li {

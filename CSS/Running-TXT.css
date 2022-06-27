@@ -9,8 +9,7 @@ body {
     justify-content: center;
     background-color: black;
     color: white;
-    width: 295%;
-    height: 400%;
+    height: 100vw;
     overflow: hidden;
     padding: 0;
     margin: 0;
@@ -18,15 +17,21 @@ body {
 
 h1 {
     font-family: 'Pixel-Bit';
-    margin: 6.2% 0;
     font-size: 150px;
-    /* outline: none; */
     text-transform: uppercase;
     background: linear-gradient(to right, #e5ff00 0%, #00ff0d 25%, #1100ff 50%, #ff00d4 75%, #ff8800 100%);
     background-size: 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate 16s linear infinite;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+@media (min-width:768px) {
+    body {
+        height: 100vh;
+    }
 }
 
 @keyframes animate {
@@ -34,28 +39,27 @@ h1 {
         background-position: 400%;
     }
     0% {
-        transform: translateX(47%);
+        transform: translateX(100%);
     }
     100% {
-        transform: translateX(-120%);
+        transform: translateX(-100%);
     }
 }
 
-@media (max-width:320px) {
+@media (max-width:768px) {
     body {
-        width: 1670%;
-        height: 100%;
+        transform: rotate(90deg);
     }
     h1 {
-        font-family: 'Pixel-Bit';
-        margin: 23% 0;
+        font-size: 50px;
+        animation: animate 14s linear infinite;
     }
     @keyframes animate {
         to {
             background-position: 400%;
         }
         0% {
-            transform: translateX(47%);
+            transform: translateX(100%);
         }
         100% {
             transform: translateX(-100%);
